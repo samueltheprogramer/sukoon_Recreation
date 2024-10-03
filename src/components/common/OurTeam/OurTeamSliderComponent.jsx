@@ -28,7 +28,7 @@ export default function OurTeamSliderComponent({ filterdTeamData }) {
         },
       },
       {
-        breakpoint: 800,
+        breakpoint: 850,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,

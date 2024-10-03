@@ -2,15 +2,25 @@ import React from "react";
 import { FaFacebook, FaFacebookF, FaTwitter } from "react-icons/fa";
 import { HiMiniArrowLongRight } from "react-icons/hi2";
 
-const NewsAndBlogsCard = ({ data, isNewsAndMediaCard }) => {
+const NewsAndBlogsCard = ({ data, isNewsAndMediaCard, isMediaPage }) => {
+  console.log(data);
   return (
     <div className="flex flex-col gap-3 border rounded-2xl shadow-2xl p-5 bg-white">
-      <img className="rounded-lg" src={data.imgURL} alt="img" />
+      <img
+        className="rounded-lg"
+        src={data.imgURL || data.image.url}
+        alt="img"
+      />
       {isNewsAndMediaCard && (
         <div className="flex w-full  justify-between items-center">
-          <h1 className="text-[15px] font-medium text-gray-500">
+          <h1
+            className={` ${
+              isMediaPage && "hidden "
+            }  text-[15px] font-medium text-gray-500`}
+          >
             {data.daysAgo} Days Ago
           </h1>
+
           <div className="flex gap-5 text-green-950/95 text-3xl ">
             <FaTwitter />
             <FaFacebookF />

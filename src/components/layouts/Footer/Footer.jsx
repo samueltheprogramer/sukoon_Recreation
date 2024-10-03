@@ -78,7 +78,9 @@ const Footer = () => {
               <h2>Residential Services </h2>
               <h2>Rehabilitation Services </h2>
               <h2>Outpatient Services</h2>
-              <h2>International Patients</h2>
+              <Link to="/international-patient-services">
+                International Patients
+              </Link>
             </div>
           </div>
         </div>
@@ -88,13 +90,13 @@ const Footer = () => {
           </h1>
           <div className="flex sm:justify-between  sm:w-8/12  justify-between lg:pl-5 items-center lg:justify-center lg:gap-5 w-full">
             <div className="flex flex-col gap-3">
-              <h2>Our Experts</h2>
-              <Link to="/about-us">About Us</Link>
-              <h2>Media</h2>
-              <h2>Blog</h2>
+              <Link to="/our_doctors">Our Experts</Link>
+              <Link to="/about_us">About Us</Link>
+              <Link to="/blogs">Blog </Link>
+              <Link to="/media">Media </Link>
             </div>
             <div className="flex flex-col gap-3">
-              <h2>FAQs</h2>
+              <Link to="/faqs">FAQs</Link>
               <h2>Contact Us</h2>
               <h2>Privacy Policy</h2>
               <h2>Terms & Conditions</h2>

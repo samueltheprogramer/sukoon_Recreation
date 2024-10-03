@@ -41,7 +41,7 @@ const NavbarMobile = () => {
           </div>
           <div className="text-lg no-scrollbar overflow-y-scroll font-medium flex flex-col gap-5 text-gray-600 w-full">
             <Link to="/">Home</Link>
-            <h1>Experts</h1>
+            <Link to="/our_doctors">Experts</Link>
             <div className="w-full flex flex-col gap-3">
               <div
                 onClick={() => setIsToggleServices(!isToggleServices)}
@@ -104,12 +104,14 @@ const NavbarMobile = () => {
               )}
             </div>
 
-            <h1>International Patients</h1>
-            <h1>Blogs</h1>
+            <Link to="/international-patient-services">
+              International Patients
+            </Link>
+            <Link to="/blogs">Blog </Link>
             <h1>Contact Us</h1>
-            <h1>FAQs</h1>
-            <Link to="/about-us">About us</Link>
-            <h1>Media</h1>
+            <Link to="/faqs">FAQs</Link>
+            <Link to="/about_us">About us</Link>
+            <Link to="/media">Media</Link>
           </div>
         </div>
       )}

@@ -10,11 +10,7 @@ const FAQ = ({ FAQdataArray }) => {
       </h1>
       <div className="lg:px-16">
         {FAQdataArray.map((item) => (
-          <Accordiant
-            title={item.title}
-            discription={item.discription}
-            pointLists={item.points}
-          />
+          <Accordiant data={item} />
         ))}
       </div>
       <div className="w-full gap-3 lg:gap-5 flex text-center justify-center items-center lg:text-2xl text-xl">

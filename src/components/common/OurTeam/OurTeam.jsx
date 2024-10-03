@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import OurTeamSliderComponent from "./OurTeamSliderComponent";
 import { IoIosArrowForward } from "react-icons/io";
 
-const OurTeam = ({ data }) => {
+const OurTeam = ({ data, isOurTeamPage }) => {
   const [ourTeamData, setOurTeamData] = useState(data);
   const [filterdTeamData, setFilterdTeamData] = useState([]);
   const [title1, setTitle1] = useState(false);
@@ -122,7 +122,11 @@ const OurTeam = ({ data }) => {
   };
 
   return (
-    <div className="w-full lg:flex lg:flex-col lg:gap-10 px-4 lg:px-20 py-10">
+    <div
+      className={`${
+        isOurTeamPage && "lg:mt-32"
+      }  w-full lg:flex lg:flex-col lg:gap-10 px-4 lg:px-20 py-10`}
+    >
       <div className="w-full flex flex-col  lg:gap-5 gap-5 ">
         <div className="flex w-full  justify-between">
           <h1 className="text-2xl  lg:text-5xl font-serif font-semibold">
@@ -132,9 +136,10 @@ const OurTeam = ({ data }) => {
             Book Appointment
           </button>
         </div>
-        <h2 className="lg:text-2xl text-lg  lg:w-8/12 font-medium text-gray-600">
-          Our experienced psychiatrists, psychologists, doctors, and counsellors
-          are committed to your recovery.
+        <h2 className="lg:text-2xl leading-relaxed text-lg  lg:w-8/12 text-gray-600">
+          {!isOurTeamPage
+            ? "Our experienced psychiatrists, psychologists, doctors, and counsellors are committed to your recovery."
+            : "A multi-disciplinary approach to treatment recognizes and values the input of medical and allied health professionals in the provision of care. Hence, our team of over 30+ mental health professionals comprises psychiatrists, clinical psychologists, occupational therapists, social workers, art-based therapists, physiotherapists, and visiting consultants in Delhi, Gurgaon and Bengaluru."}
         </h2>
         <div className="group  flex no-scrollbar pb-5 overflow-x-scroll  w-full gap-5">
           <button

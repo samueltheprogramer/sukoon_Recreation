@@ -16,7 +16,10 @@ const Navbar = () => {
           <StaticImage src="../../../images/sukoonLogo.svg" alt="sukoonLogo" />
         </Link>
         <div className="flex text-xl   gap-14 ">
-          <Link className="hover:text-xl hover:font-medium     py-8 " to="/">
+          <Link
+            className="hover:text-xl hover:font-medium     py-8 "
+            to="/our_doctors"
+          >
             Experts
           </Link>
           <Link
@@ -38,7 +41,7 @@ const Navbar = () => {
           </Link>
           <Link
             className="hover:text-xl    hover:font-medium text-xl py-8  px-2"
-            to="/"
+            to="/international-patient-services"
           >
             International Patients
           </Link>
@@ -146,11 +149,11 @@ const Navbar = () => {
         >
           <div className="text-xl font-medium text-gray-500 flex flex-col gap-3">
             <h1 className="text-black">More</h1>
-            <Link to="/about-us">About us </Link>
-            <h1>Media</h1>
-            <h1>Blog </h1>
+            <Link to="/about_us">About us </Link>
+            <Link to="/media">Media</Link>
+            <Link to="/blogs">Blog </Link>
             <h1>Contact us</h1>
-            <h1>FAQs</h1>
+            <Link to="/faqs">FAQs</Link>
           </div>
           <StaticImage src="../../../images/moreMenu_1.webp" />
         </div>

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 
 const OurFacilities = () => {
   const api_key = "AIzaSyC1LmTCDnaR5y5K3or-TckA0cI0it7BzEo";
-  const [button1, setButton1] = useState(false);
+
+  const [button1, setButton1] = useState(true);
   const [button2, setButton2] = useState(false);
   const [button3, setButton3] = useState(false);
   const [button4, setButton4] = useState(false);
@@ -46,26 +47,8 @@ const OurFacilities = () => {
     setLng(77.16849654232831);
   };
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: api_key,
-  });
-
-  const containerStyle = {
-    width: "350px",
-    height: "400px",
-  };
-
-  const center = {
-    lat: lat,
-    lng: lng,
-  };
-
-  if (loadError) return;
-  if (!isLoaded) return;
-
   return (
-    <div className="lg:px-20 lg:mb-20 mb-10 sm:mb-[4.5rem] lg:py-10 p-4 flex flex-col gap-3 lg:gap-5 sm:gap-4">
+    <div className="lg:px-20 lg:mb-7 mb-5 sm:mb-[1rem] lg:py-5 p-4 flex flex-col gap-3 lg:gap-10 w-full sm:gap-4 ">
       <h1 className="lg:text-5xl text-3xl font-semibold font-serif text-black/90">
         Our Facilities
       </h1>
@@ -103,15 +86,63 @@ const OurFacilities = () => {
           Chhatarpur
         </button>
       </div>
-      <div className="w-56 h-96">
-        <GoogleMap
-          className="googleMap"
-          mapContainerClassName="map-container"
-          center={center}
-          zoom={15}
-        >
-          <Marker position={center} />
-        </GoogleMap>
+      <div className="w-full h-[20rem] lg:h-[38rem] lg:w-full">
+        <div className="w-full h-full">
+          <div className="w-full h-full">
+            {button1 && (
+              <iframe
+                width="100%"
+                height="100%"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sukoon%20Psychiatry%20Centre,%20Gurugram,%20Haryana+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+                <a href="https://www.gps.ie/">gps vehicle tracker</a>
+              </iframe>
+            )}
+            {button2 && (
+              <iframe
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sukoon%20Psychiatry%20Center%20-%20Bangalore+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+                <a href="https://www.gps.ie/">gps devices</a>
+              </iframe>
+            )}
+            {button3 && (
+              <iframe
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sukoon%20Centre%20for%20Mental%20Health,%20New%20Delhi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+                <a href="https://www.gps.ie/">gps vehicle tracker</a>
+              </iframe>
+            )}
+            {button4 && (
+              <iframe
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Sukoon%20Recovery%20Centre,%20New%20Delhi+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+                <a href="https://www.gps.ie/">gps vehicle tracker</a>
+              </iframe>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
